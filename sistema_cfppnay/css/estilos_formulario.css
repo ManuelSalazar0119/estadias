@@ -1,0 +1,268 @@
+/* Reset y fuentes */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    overscroll-behavior: none; /* Evita el scroll infinito Y EL REBOTE! */
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #444;
+  background: #f4f6fb;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr 1fr;
+    grid-template-rows: 90px 1fr;
+    gap: 0;
+    min-height: 100vh;
+    height: 100%;
+    background: #f4f6fb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Sidebar izquierdo */
+.div1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / 2;
+    background: #882e2e !important;
+    border-right: 1.5px solid #e0e0e0;
+    box-shadow: 2px 0 8px #0001;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    padding-left: 0%;
+    padding-top: 18px;
+    width: 100%;
+    min-width: 50px;
+}
+.div2 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+}
+.div3 {
+    grid-column: 2 / span 3;      /* Ocupa desde la columna 2 hasta el final */
+    grid-row: 2 / span 5;         /* Ocupa desde la fila 1 hasta la última */
+    background: #fff;
+    padding: 5px 0 18px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100%;
+    background-image: url('../imagenes/vacasAtardecer.png');
+    background-repeat: repeat;
+}
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-group-title {
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 18px 8px 18px;
+  cursor: pointer;
+  font-size: 1em;
+  border-top: 1px solid #fff2;
+  background: none;
+  transition: background 0.2s;
+}
+.nav-group-title.active,
+.nav-group-title:hover {
+  background: #a03d3d;
+}
+.nav-group {
+  list-style: none;
+  padding: 0 0 0 10px;
+  margin: 0;
+  transition: max-height 0.3s;
+  overflow: hidden;
+}
+.nav-group.collapsed {
+  max-height: 0 !important;
+  padding: 0 0 0 10px;
+}
+.nav li {
+  margin: 0;
+}
+.nav li a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 0.98em;
+  transition: background 0.2s, color 0.2s;
+}
+.nav li a i {
+  margin-right: 8px;
+}
+.nav li a:hover,
+.nav li a.active {
+  background: #fff2;
+  color: #f0a500;
+}
+
+.user-profile-dropdown {
+  position: relative;
+}
+.user-profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+.user-profile-btn img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.user-dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  min-width: 160px;
+  z-index: 10;
+}
+.user-dropdown-menu .dropdown-item {
+  display: block;
+  padding: 10px 18px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.user-dropdown-menu .dropdown-item:hover {
+  background: #f0a500;
+  color: #fff;
+}
+
+.container {
+  max-width: 70%;
+  width: 100%;
+  padding: 2em 2.5em 2em 2.5em;
+  margin: 0 auto;
+  border-radius: 6px;
+  background-color: #fff8f8;
+  box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.08);
+}
+h1 {
+  color: #882e2e;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/* Formulario y campos */
+.input-group {
+  margin-bottom: 1.2em;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 0.4em;
+  color: #444;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1em;
+}
+.input-group input,
+.input-group select,
+.input-group textarea {
+  display: block;
+  width: 100%;
+  padding: 0.7em 1em;
+  font-size: 1em;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  background: #f9f9f9;
+  margin-bottom: 0;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: #f0a500;
+  color: #f4f6fb;
+  background-color: #8c5656;
+  outline: none;
+}
+.input-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 0.5em;
+}
+.col-half {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 700px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr;
+  }
+  .div1 {
+    display: none;
+  }
+  .div2 {
+    grid-column: 1 / 2;
+    padding: 0 10px;
+  }
+  .div3 {
+    grid-column: 1 / 2;
+    padding: 18px 0 18px 0;
+  }
+  .container {
+    padding: 1em 0.5em;
+    max-width: 100%;
+  }
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .col-half {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Botón */
+button[type="submit"] {
+  background: #f0a500;
+  color: #fff;
+  border: none;
+  padding: 0.8em 2em;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.2s;
+}
+button[type="submit"]:hover {
+  background: #bd8200;
+}
+.div4 {
+display: none;
+}

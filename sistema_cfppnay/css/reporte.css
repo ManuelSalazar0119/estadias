@@ -1,0 +1,242 @@
+/* =========================================================
+   REPORTE.CSS - DISEÑO MODERNIZADO (Sin afectar funciones)
+   ========================================================= */
+
+/* --- 1. CONTENEDOR PRINCIPAL DEL REPORTE --- */
+.report-container {
+    background: white;
+    padding: 30px; /* Más espacio interno */
+    border-radius: 16px; /* Bordes más redondeados */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06); /* Sombra más suave y moderna */
+    margin-top: 25px;
+    border: 1px solid #f0f2f5; /* Borde sutil */
+    overflow-x: auto;
+    position: relative;
+}
+
+/* --- 2. BARRA DE HERRAMIENTAS (TOOLBAR) REDISEÑADA --- */
+.toolbar-container {
+    display: flex;
+    gap: 20px; /* Más espacio entre elementos */
+    flex-wrap: wrap;
+    align-items: flex-end;
+    /* Cambio radical: Tarjeta blanca limpia en vez de barra roja */
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+    border: 1px solid #f0f2f5;
+}
+
+/* Etiquetas (Labels) */
+.toolbar-container label {
+    color: #4a5568; /* Gris oscuro elegante */
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: block;
+    letter-spacing: 0.02em;
+    display: flex; align-items: center; gap: 6px; /* Iconos alineados */
+}
+
+/* Selectores (Inputs) Modernos */
+.filter-select {
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0; /* Borde más grueso y claro */
+    border-radius: 12px;
+    font-size: 14px;
+    background: #f8fafc; /* Fondo gris muy claro */
+    min-width: 150px;
+    color: #2d3748;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    /* Flecha personalizada */
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.8rem center;
+    background-repeat: no-repeat;
+    background-size: 1.2em 1.2em;
+    padding-right: 2.5rem;
+}
+
+.filter-select:focus {
+    border-color: #1a237e; /* Color principal al enfocar */
+    box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.1);
+    outline: none;
+    background-color: #fff;
+}
+
+/* --- BOTONES MODERNIZADOS --- */
+/* Estilos base para todos los botones */
+.btn-primary, .btn-justificacion, .btn-excel {
+    height: 48px; /* Botones más altos y cómodos */
+    padding: 0 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre icono y texto */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    color: white;
+}
+/* Efecto Hover/Active unificado */
+.btn-primary:hover, .btn-justificacion:hover, .btn-excel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+.btn-primary:active, .btn-justificacion:active, .btn-excel:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Botón Generar (Azul Principal) */
+.btn-primary {
+    background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+}
+
+/* Botón Justificaciones (Azul Cian) */
+.btn-justificacion {
+    background: linear-gradient(135deg, #00acc1 0%, #00bcd4 100%);
+}
+
+/* Botón Excel (Verde Profesional) */
+.btn-excel {
+    background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+    text-decoration: none;
+}
+
+.push-right { margin-left: auto; }
+
+/* --- 3. TUS ESTILOS DE TABLA (.tg) INTACTOS --- */
+.tg {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: 'Inter', 'Segoe UI', sans-serif; /* Usamos la fuente moderna */
+    min-width: 1000px;
+}
+
+.tg td, .tg th {
+    border: 1px solid #e2e8f0; /* Bordes más sutiles */
+    padding: 14px 10px; /* Más espacio en celdas */
+    word-break: normal;
+    transition: background-color 0.2s;
+}
+
+/* Encabezados degradados */
+.tg th {
+    background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Filas especiales */
+.tg .tg-uzvj, .tg .tg-wa1i { background: #2c3e50 !important; color: white !important; }
+.tg .tg-yla0 {
+    background: linear-gradient(90deg, #e3f2fd, #bbdefb) !important;
+    font-weight: 700 !important;
+    color: #0d47a1 !important;
+    border-left: 4px solid #2196f3 !important;
+}
+
+/* Filas alternadas */
+.tg tbody tr:nth-child(even):not(.tg-yla0) { background-color: #f8fafc !important; }
+.tg tbody tr:nth-child(odd):not(.tg-yla0) { background-color: white !important; }
+.tg tbody tr:hover:not(.tg-yla0) { background-color: #e3f2fd !important; transform: scale(1.005); transition: 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.05); z-index: 1; position: relative; }
+
+/* Celdas destacadas */
+.tg .tg-qjdd { background-color: #e8f5e9 !important; border-left: 3px solid #a1ffa4 !important; }
+.tg .tg-g4z8 { background-color: #e3f2fd !important; border-left: 3px solid #2196f3 !important; }
+.tg .tg-3yw8 { background: linear-gradient(90deg, #fff3cd, #ffeaa7) !important; animation: pulse 2s infinite; font-weight: bold; }
+
+@keyframes pulse {
+    0% { background-color: #fff3cd; } 50% { background-color: #ffeaa7; } 100% { background-color: #fff3cd; }
+}
+
+/* --- 4. ESTILOS DE PORCENTAJES (PASTEL) --- */
+.tg td:contains("%") {
+    font-weight: 700 !important;
+    border-radius: 8px;
+    padding: 6px 12px !important;
+    display: inline-block;
+    margin: 2px;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+/* Verde (Alto) */
+.tg td:contains("100%"), .tg td:contains("105%"), .tg td:contains("110%"), .tg td:contains("120%") {
+    background: #d4edda !important; color: #155724 !important; border: 1px solid #c3e6cb !important;
+}
+/* Amarillo (Medio) */
+.tg td:contains("50%"), .tg td:contains("60%"), .tg td:contains("70%"), .tg td:contains("80%"), .tg td:contains("90%") {
+    background: #fff3cd !important; color: #856404 !important; border: 1px solid #ffeaa7 !important;
+}
+/* Rojo (Bajo) */
+.tg td:contains("0%"), .tg td:contains("10%"), .tg td:contains("20%"), .tg td:contains("30%"), .tg td:contains("40%") {
+    background: #f8d7da !important; color: #721c24 !important; border: 1px solid #f5c6cb !important;
+}
+
+/* --- 5. MODAL DE JUSTIFICACIONES (Style Upgrade) --- */
+.modal-overlay {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(26, 35, 126, 0.4); /* Fondo azul oscuro semi-transparente */
+    backdrop-filter: blur(4px); /* Efecto borroso de fondo */
+    z-index: 9999;
+    justify-content: center; align-items: center;
+}
+
+.modal-container {
+    background: #fff; width: 90%; max-width: 850px; padding: 30px;
+    border-radius: 20px; box-shadow: 0px 20px 40px rgba(0,0,0,0.2);
+    position: relative; animation: aparecerModal 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    max-height: 85vh; overflow-y: auto;
+}
+
+@keyframes aparecerModal { from { opacity: 0; transform: translateY(30px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+.modal-container h2 {
+    color: #1a237e; font-weight: 700; margin-top: 0; text-align: center;
+}
+
+.modal-cerrar {
+    position: absolute; top: 20px; right: 25px; font-size: 28px; color: #999; cursor: pointer; transition: 0.2s;
+    background: #f0f2f5; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+.modal-cerrar:hover { color: #e74c3c; background: #ffebee; }
+
+#tablaJustificaciones { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 25px; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
+#tablaJustificaciones th { background: #1a237e; color: #fff; padding: 15px; font-weight: 600; }
+#tablaJustificaciones td { border-bottom: 1px solid #e2e8f0; padding: 15px; background: #fff; }
+#tablaJustificaciones textarea {
+    width: 100%; min-height: 70px; padding: 10px; border: 2px solid #e2e8f0; border-radius: 10px;
+    font-family: 'Inter', sans-serif; transition: 0.2s;
+}
+#tablaJustificaciones textarea:focus { border-color: #1a237e; outline: none; box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.1); }
+
+#guardarJustificaciones {
+    display: block; margin: 30px auto 0;
+    background: linear-gradient(135deg, #1a237e 0%, #283593 100%); color: white;
+    border: none; padding: 14px 40px; font-size: 16px; border-radius: 12px; cursor: pointer; font-weight: 600;
+    box-shadow: 0 4px 15px rgba(26, 35, 126, 0.2); transition: 0.3s;
+}
+#guardarJustificaciones:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(26, 35, 126, 0.3); }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .toolbar-container { flex-direction: column; align-items: stretch; }
+    .filter-group, .filter-select, .btn-primary, .btn-justificacion, .btn-excel { width: 100%; }
+    .push-right { margin-left: 0; margin-top: 15px; }
+}

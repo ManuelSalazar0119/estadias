@@ -1,0 +1,124 @@
+:root {
+    --sidebar-width: 260px;
+    --primary-green: #2F855A;
+    --primary-hover: #276749;
+    --bg-main: #f8fafc;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+}
+
+/* Layout Maestro Blindado */
+.panel-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: stretch;
+    background-color: var(--bg-main);
+}
+
+/* SIDEBAR: Inamovible y Robusto */
+.panel-sidebar {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    max-width: var(--sidebar-width);
+    flex-shrink: 0; /* Prohíbe al navegador redimensionar el menú */
+    background: #ffffff;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.sidebar-nav {
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-y: auto;
+}
+
+.sidebar-section-title {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 25px 0 10px 12px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-link i {
+    width: 20px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.sidebar-link:hover {
+    background: #f1f5f9;
+}
+
+.sidebar-link.active {
+    background: #f0fdf4;
+    color: var(--primary-green);
+    box-shadow: inset 4px 0 0 var(--primary-green);
+}
+
+.sidebar-link.active i { color: var(--primary-green); }
+
+/* CONTENIDO PRINCIPAL: Fluido con Scroll Independiente */
+.panel-content {
+    flex-grow: 1;
+    min-width: 0; /* Evita que tablas anchas empujen el sidebar */
+    padding: 30px 40px;
+    overflow-y: auto;
+}
+
+/* TABLA MODERNIZADA (Reemplaza a .tg) */
+.modern-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.modern-table thead th {
+    background: #1e293b; /* Cabecera Azul Marino Profundo */
+    color: #ffffff;
+    padding: 14px 10px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-right: 1px solid #334155;
+    border-bottom: 1px solid #334155;
+}
+
+.modern-table tbody td {
+    padding: 12px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+}
+
+.modern-table .bg-section { background-color: #f0f9ff; color: #0369a1; font-weight: 800; text-align: left; }
+.modern-table .col-realizado { background-color: #f0fdf4; font-weight: 700; color: #166534; }
