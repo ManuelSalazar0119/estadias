@@ -1,1 +1,0 @@
-Mover todo tal cual está, a la carpeta raíz de HTDOCS
